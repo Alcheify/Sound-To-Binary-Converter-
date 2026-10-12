@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Converter</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <p class="student">Name: Alche V. Paye | BSCS-3</p>
+
+  <main class="shell">
+
+    <h1>Sound-to-Binary Converter</h1>
+    <div class="tagline">SAMPLE. QUANTIZE. ENCODE.</div>
+
+    <section class="card">
+      <div class="card-title">WAVE SETTINGS</div>
+
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="freq">Frequency (Hz)</label>
+          <input id="freq" type="number" min="0.01"
+            step="any" placeholder="e.g. 440">
+        </div>
+
+        <div class="field">
+          <label for="amp">Amplitude (0 to 1)</label>
+          <input id="amp" type="number" min="0"
+            max="1" step="any" placeholder="e.g. 0.8">
+        </div>
+
+        <div class="field">
+          <label for="samples">Number of Samples</label>
+          <input id="samples" type="number" min="1"
+            max="1000" step="1" placeholder="e.g. 8">
+        </div>
+
+        <div class="field">
+          <label for="bits">Bits per Sample</label>
+          <input id="bits" type="number" min="1"
+            max="16" step="1" placeholder="e.g. 3">
+        </div>
+
+      </div>
+
+      <button id="convert" type="button">CONVERT</button>
+      <div id="error" role="alert"></div>
+    </section>
+
+    <div id="facts"></div>
+
+    <div id="waveWrap">
+      <canvas id="wave"></canvas>
+    </div>
+
+    <div id="tableArea"></div>
+
+  </main>
+
+     <script src="script.js"></script>
+
+</body>
+</html>
